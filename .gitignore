@@ -49,5 +49,4 @@ bower_components
 .ruby-version
 bundle.js
 test/output
-lib/
 .idea/
