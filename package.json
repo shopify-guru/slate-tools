@@ -1,10 +1,36 @@
 {
-  "name": "@shopify/slate-tools",
-  "version": "0.3.4",
-  "description": "Tooling for Shopify themes",
-  "main": "lib/gulpfile.js",
-  "license": "MIT",
-  "author": "Shopify Inc. + Shopify-guru",
+  "_from": "@shopify/slate-tools@slate-v0",
+  "_id": "@shopify/slate-tools@0.14.0",
+  "_inBundle": false,
+  "_integrity": "sha512-qoikAZkb5yVWVLD9a5AguMZqIcHxgJxBNSbHF6l/oyToAe5HH2ecdF2MhsFt9KQkHeERBVBo8trtXlSOIvIxJg==",
+  "_location": "/@shopify/slate-tools",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "@shopify/slate-tools@slate-v0",
+    "name": "@shopify/slate-tools",
+    "escapedName": "@shopify%2fslate-tools",
+    "scope": "@shopify",
+    "rawSpec": "slate-v0",
+    "saveSpec": null,
+    "fetchSpec": "slate-v0"
+  },
+  "_requiredBy": [
+    "#DEV:/",
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/@shopify/slate-tools/-/slate-tools-0.14.0.tgz",
+  "_shasum": "2880efd9d6525bf5d4795a36b0201b8e125a88ea",
+  "_spec": "@shopify/slate-tools@slate-v0",
+  "_where": "/home/ubuntu18/Workspace/chris-wang/shopify-theme-markmiss",
+  "author": {
+    "name": "Shopify Inc."
+  },
+  "bugs": {
+    "url": "https://github.com/Shopify/slate/issues"
+  },
+  "bundleDependencies": false,
   "dependencies": {
     "@shopify/theme-lint": "1.0.3",
     "@shopify/themekit": "0.6.6",
@@ -21,7 +47,6 @@
     "gulp-ext-replace": "0.3.0",
     "gulp-include": "2.3.1",
     "gulp-plumber": "1.1.0",
-    "gulp-sass": "4.1.0",
     "gulp-size": "2.1.0",
     "gulp-svgmin": "1.2.3",
     "gulp-uglify": "2.0.0",
@@ -35,6 +60,8 @@
     "vinyl-paths": "2.1.0",
     "yargs": "6.4.0"
   },
+  "deprecated": false,
+  "description": "Tooling for Shopify themes",
   "devDependencies": {
     "babel-cli": "6.18.0",
     "babel-core": "6.18.2",
@@ -42,27 +69,29 @@
     "babel-preset-shopify": "15.0.1",
     "babel-register": "6.18.0",
     "eslint": "3.10.2",
+    "eslint-plugin-import": "2.7.0",
     "eslint-plugin-node": "3.0.4",
     "eslint-plugin-shopify": "15.1.0"
   },
-  "scripts": {
-    "clean": "rm -rf lib/",
-    "start": "npm run clean && babel -w -d lib/ src/",
-    "test": "npm run lint",
-    "prepublish": "npm test && npm run clean && babel -d lib/ src/",
-    "lint": "eslint --max-warnings 0 -c .eslintrc.json src/",
-    "lint-allow-warning": "eslint -c .eslintrc.json src/"
-  },
+  "homepage": "https://github.com/Shopify/slate",
   "keywords": [
     "shopify",
     "themekit"
   ],
+  "license": "MIT",
+  "main": "lib/gulpfile.js",
+  "name": "@shopify/slate-tools",
   "repository": {
     "type": "git",
-    "url": "git://github.com/shopify-guru/slate-tools.git"
+    "url": "git://github.com/Shopify/slate.git"
   },
-  "homepage": "https://github.com/shopify-guru/slate-tools",
-  "bugs": {
-    "url": "https://github.com/shopify-guru/slate-tools/issues"
-  }
+  "scripts": {
+    "clean": "rm -rf lib/",
+    "lint": "eslint --max-warnings 0 src/",
+    "lint-allow-warning": "eslint src/",
+    "prepublish": "npm test && npm run clean && babel -d lib/ src/",
+    "start": "npm run clean && babel -w -d lib/ src/",
+    "test": "npm run lint"
+  },
+  "version": "0.14.0"
 }

@@ -2,7 +2,6 @@ const gulp = require('gulp');
 const cssimport = require('gulp-cssimport');
 const extReplace = require('gulp-ext-replace');
 const plumber = require('gulp-plumber');
-const sass = require('gulp-sass');
 const chokidar = require('chokidar');
 
 const config = require('./includes/config.js');
@@ -28,24 +27,6 @@ function processCss() {
 }
 
 /**
- * Compile and minify css via gulp-sass and copys to the `/dist` folder
- *
- * @param {Array} files
- * @returns {Stream}
- * @private
- */
-
-function processSass() {
-  messages.logProcessFiles('build:css:minify');
-
-  return gulp.src(config.roots.css)
-    .pipe(plumber(utils.errorHandler))
-    .pipe(sass({outputStyle: 'compressed'}))
-    .pipe(gulp.dest(config.dist.assets));
-}
-
-
-/**
  * Concatenate css via gulp-cssimport
  *
  * @function build:css
@@ -53,9 +34,7 @@ function processSass() {
  * @static
  */
 gulp.task('build:css', () => {
-  processCss();
-  processSass();
-  return;
+  return processCss();
 });
 
 /**
@@ -70,6 +49,5 @@ gulp.task('watch:css', () => {
     .on('all', (event, path) => {
       messages.logFileEvent(event, path);
       processCss();
-      processSass();
     });
 });

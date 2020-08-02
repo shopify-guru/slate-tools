@@ -69,6 +69,7 @@ function deploy(cmd, files, env) {
   }).catch((err) => {
     activeDeploy = false;
     messages.logTransferFailed(err);
+    fs.appendFileSync(config.deployLog, messages.logDeployErrors(cmd, files, err)); // eslint-disable-line no-sync
     return checkDeployStatus();
   });
 }
@@ -105,6 +106,7 @@ gulp.task('watch:src', [
 gulp.task('watch:dist', () => {
   const watcher = chokidar.watch(['./', '!config.yml'], {
     cwd: config.dist.root,
+    ignored: /(^|[/\\])\../,
     ignoreInitial: true,
   });
 
