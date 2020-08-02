@@ -40,6 +40,7 @@ function processSass() {
 
   return gulp.src(config.roots.css)
     .pipe(plumber(utils.errorHandler))
+    .pipe(cssimport())
     .pipe(sass({outputStyle: 'compressed'}))
     .pipe(gulp.dest(config.dist.assets));
 }
