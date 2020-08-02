@@ -1,36 +1,10 @@
 {
-  "_from": "@shopify/slate-tools@slate-v0",
-  "_id": "@shopify/slate-tools@0.14.0",
-  "_inBundle": false,
-  "_integrity": "sha512-qoikAZkb5yVWVLD9a5AguMZqIcHxgJxBNSbHF6l/oyToAe5HH2ecdF2MhsFt9KQkHeERBVBo8trtXlSOIvIxJg==",
-  "_location": "/@shopify/slate-tools",
-  "_phantomChildren": {},
-  "_requested": {
-    "type": "tag",
-    "registry": true,
-    "raw": "@shopify/slate-tools@slate-v0",
-    "name": "@shopify/slate-tools",
-    "escapedName": "@shopify%2fslate-tools",
-    "scope": "@shopify",
-    "rawSpec": "slate-v0",
-    "saveSpec": null,
-    "fetchSpec": "slate-v0"
-  },
-  "_requiredBy": [
-    "#DEV:/",
-    "#USER"
-  ],
-  "_resolved": "https://registry.npmjs.org/@shopify/slate-tools/-/slate-tools-0.14.0.tgz",
-  "_shasum": "2880efd9d6525bf5d4795a36b0201b8e125a88ea",
-  "_spec": "@shopify/slate-tools@slate-v0",
-  "_where": "/home/ubuntu18/Workspace/chris-wang/shopify-theme-markmiss",
-  "author": {
-    "name": "Shopify Inc."
-  },
-  "bugs": {
-    "url": "https://github.com/Shopify/slate/issues"
-  },
-  "bundleDependencies": false,
+  "name": "@shopify/slate-tools",
+  "version": "0.15.0",
+  "description": "Tooling for Shopify themes",
+  "main": "lib/gulpfile.js",
+  "license": "MIT",
+  "author": "Shopify Inc. + Shopify-guru",
   "dependencies": {
     "@shopify/theme-lint": "1.0.3",
     "@shopify/themekit": "0.6.6",
@@ -47,6 +21,7 @@
     "gulp-ext-replace": "0.3.0",
     "gulp-include": "2.3.1",
     "gulp-plumber": "1.1.0",
+    "gulp-sass": "4.1.0",
     "gulp-size": "2.1.0",
     "gulp-svgmin": "1.2.3",
     "gulp-uglify": "2.0.0",
@@ -61,7 +36,6 @@
     "yargs": "6.4.0"
   },
   "deprecated": false,
-  "description": "Tooling for Shopify themes",
   "devDependencies": {
     "babel-cli": "6.18.0",
     "babel-core": "6.18.2",
@@ -78,12 +52,9 @@
     "shopify",
     "themekit"
   ],
-  "license": "MIT",
-  "main": "lib/gulpfile.js",
-  "name": "@shopify/slate-tools",
   "repository": {
     "type": "git",
-    "url": "git://github.com/Shopify/slate.git"
+    "url": "git://github.com/shopify-guru/slate-tools.git"
   },
   "scripts": {
     "clean": "rm -rf lib/",
@@ -92,6 +63,5 @@
     "prepublish": "npm test && npm run clean && babel -d lib/ src/",
     "start": "npm run clean && babel -w -d lib/ src/",
     "test": "npm run lint"
-  },
-  "version": "0.14.0"
+  }
 }
