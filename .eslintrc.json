@@ -1,0 +1,11 @@
+{
+  "extends": [
+    "plugin:shopify/esnext",
+    "plugin:shopify/node"
+  ],
+  "rules": {
+    "no-console": 0,
+    "node/shebang": 0,
+    "no-process-env": 0
+  }
+}
