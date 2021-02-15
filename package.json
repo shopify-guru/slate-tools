@@ -28,7 +28,7 @@
     "gulp-util": "3.0.7",
     "gulp-zip": "3.2.0",
     "js-yaml": "3.7.0",
-    "lodash": "4.17.2",
+    "lodash": "4.17.19",
     "open": "0.0.5",
     "require-dir": "0.3.2",
     "run-sequence": "1.2.2",
